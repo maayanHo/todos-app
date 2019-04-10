@@ -1,0 +1,19 @@
+<div class="filter-container" fxLayout fxLayoutAlign="center center"
+     *ngIf="todoService.getTodos().length > 0">
+  <mat-form-field fxFlex="40%">
+    <input matInput type="text" [(ngModel)]="searchText" placeholder="Search! Try filter by title or date">
+  </mat-form-field>
+</div>
+
+<div fxLayout fxLayoutAlign="center center">
+  <div *ngIf="todoService.getTodos().length > 0"
+       cdkDropList
+       class="example-list"
+       (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let todo of todoService.getTodos() | filter : searchText" cdkDrag>
+      <app-todo-item [todo]="todo"></app-todo-item>
+      <div class="divider"></div>
+    </div>
+  </div>
+</div>
+

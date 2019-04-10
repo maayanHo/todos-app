@@ -1,0 +1,16 @@
+<mat-card class="todo-card" fxLayoutAlign="center center">
+  <form class="todo-form">
+
+    <mat-form-field class="input-wrapper">
+      <input name="todo-input" matInput [(ngModel)]="todoText" placeholder="Add New Task" autocomplete="off">
+    </mat-form-field>
+
+    <div class="clearfix"></div>
+
+    <div class="button-container">
+      <button class="button-save" mat-raised-button color="primary" (click)="addTodo()">Save</button>
+      <button class="button-cancel" mat-raised-button color="accent" (click)="cancelTodo()">Cancel</button>
+    </div>
+
+  </form>
+</mat-card>

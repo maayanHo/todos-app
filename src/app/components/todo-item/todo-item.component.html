@@ -1,0 +1,26 @@
+<mat-card class="todo-card" [ngClass]="checked ? 'done' : ''">
+
+  <div class="mat-card-container">
+    <mat-card-content>
+      <mat-checkbox
+        class="todo-checkbox"
+        matTooltip="Done"
+        (click)="checkboxClicked(todo)"
+        color="primary"
+        [(ngModel)]="checked"></mat-checkbox>
+      <span class="todo-text">{{todo.text}}</span>
+      <span class="todo-date">{{todo.date | date: 'dd/MM/yyyy' }}</span>
+    </mat-card-content>
+  </div>
+
+  <div class="mat-card-actions-container">
+    <mat-card-actions>
+      <div style="display: block">
+        <mat-icon (click)="editTodoDialog(todo)" matTooltip="Edit">edit</mat-icon>
+        <mat-icon (click)="deleteTodo()" matTooltip="Delete">delete</mat-icon>
+        <mat-icon (click)="duplicateTodo(todo)" matTooltip="copy">control_point_duplicate</mat-icon>
+      </div>
+    </mat-card-actions>
+  </div>
+
+</mat-card>

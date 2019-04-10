@@ -1,0 +1,81 @@
+.todo-card button {
+  float: right;
+  align-items: center;
+}
+
+button:nth-of-type(1) {
+  margin-left: 20px;
+}
+
+.mat-card {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.mat-card-container {
+  width: 50%;
+}
+
+.mat-card-actions {
+  padding: 0;
+}
+
+.mat-card-actions-container {
+  float: right;
+}
+
+.material-icons {
+  position: relative;
+}
+
+.material-icons:hover {
+  color: purple;
+  cursor: pointer;
+}
+
+::ng-deep .mat-menu-content {
+  overflow: hidden;
+}
+
+::ng-deep .mat-menu-item {
+  font-size: 12px;
+}
+
+::ng-deep .mat-menu-panel {
+  min-width: 0 !important;
+}
+
+button[_ngcontent-c3]:nth-of-type(1) {
+  margin-left: 0;
+}
+
+.done {
+  color: #a9a9a9;
+  text-decoration: line-through;
+}
+
+.todo-text {
+  padding: 0 15px 0 0 ;
+}
+
+.todo-checkbox {
+  padding: 0 15px 0 0 ;
+}
+
+.mat-card-actions, .mat-card-content, .mat-card-subtitle {
+  margin-bottom: 0;
+}
+
+.mat-icon{
+  padding-right: 10px;
+}
+
+.todo-date {
+  float: right;
+}
+
+.mat-card-container {
+  width: 75%;
+}
